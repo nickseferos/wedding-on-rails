@@ -3,32 +3,29 @@ def seed_image(file_name)
 end
 
 event = Event.create!({
-  date: Date.parse("2015-06-13"),
-  location: "Mansion House, Clifton, Bristol, UK",
+  date: Date.parse("2018-09-15"),
+  location: "Port of Anacortes, Anacortes, WA",
   active: true,
-  title: "Adam & Cerys",
-  partner_one: "Adam",
-  partner_two: "Cerys",
-  venue_name: "Mansion House",
-  venue_address_line_one: "Clifton Down",
-  venue_address_city: "Bristol",
-  venue_address_state: "Bristol",
-  venue_address_zip: "BS8 3LJ",
-  venue_address_country: "United Kingdom",
+  title: "Nicholas & Denali",
+  partner_one: "Denali",
+  partner_two: "Nicholas",
+  venue_name: "Port of Anacortes - Transit Shed",
+  venue_address_line_one: "100 Commercial Ave",
+  venue_address_city: "Anacortes",
+  venue_address_state: "Washington",
+  venue_address_zip: "98221",
+  venue_address_country: "United States",
   venue_body: """
-Both the ceremony and reception will be held at The Mansion House located in the heart of Clifton.
-We're *hoping* for an outdoor ceremony in the venues beautiful gardens.
+Both the ceremony and reception will be held at The Port of Anacortes - Transit Shed located in the heart of Anacortes.
+We're planning for an outdoor ceremony on the venues beautiful pier.
   """,
   venue_directions: """
-**From Dorset:** Take the A350 road via Shaftesbury, Warminster and Bath *appox 2hrs 30min*.
+**From Seattle:** Take I5 North to SR20, follow that to the end of time. *appox 1hr 30min*.
 
-**From elsewhere:** To get directions [click here](https://www.google.co.uk/maps/dir//Mansion+House+Bristol,+Clifton+Down,+Avon,+Bristol+BS8+3LJ/@51.461078,-2.6274359,17z).
+**From elsewhere:** To get directions [click here](https://www.google.com/maps/place/Port+of+Anacortes/@48.521744,-122.6150107,17z/data=!3m1!4b1!4m5!3m4!1s0x548579de2a088a69:0xdb55ebe2bd0a821f!8m2!3d48.521744!4d-122.612822).
 
-The Mansion House is located between the Clifton suspension bridge and Bristol Zoo. **From the portway** take the
-road up to Clifton and then take the first right keeping left at the fork and continue for 150 yards. **From the
-suspension bridge** heading into Clifton take the second left and continue down Canynge Road.
-
-Mansion House Bristol, Clifton Down, Bristol, BS8 3LJ
+The Transit Shed is located at the port of Anacortes in Anacortes Washington. The venue is located at the end of Commerical Ave.
+This venue is an active pier and an old warehouse. Heels are not reccommended, flats preferred.
   """
 })
 
@@ -153,7 +150,3 @@ guest_rsvp_true = Guest.create!({
   group_id: debug.id,
   rsvp: true
 })
-
-
-
-
