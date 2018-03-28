@@ -30,7 +30,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Sacramento", sans-serif;
+  font-family: "Amatic SC", sans-serif;
   font-size: 3em;
 }
 
@@ -44,12 +44,12 @@ h5 {
 }
 
 h6 {
-  font-family: "bebas_neueregular", sans-serif;
+  font-family: "Amatic SC", sans-serif;
   font-size: 3em;
 }
 
 p {
-  font-family: "Book Antiqua", "Palatino", "Palatino Linotype", "Palatino LT STD", "Georgia", serif;
+  font-family: "Open Sans", "Palatino", "Palatino Linotype", "Palatino LT STD", "Georgia", serif;
   font-size: 1.2em;
 
   small {
@@ -72,17 +72,8 @@ p {
 }
 
 
-.font--pacifico {
-  position: relative;
-  font-family: "pacificoregular", sans-serif;
-  font-size: 1.2em;
-  margin: 0 -0.1em;
-  top: 0.12em;
-  line-height: 0;
-}
-
 label {
-  font-family: "bebas_neueregular", sans-serif;
+  font-family: "Amatic SC", sans-serif;
   font-size: 2em;
   color: $white;
   [title="required"] { display: none; }
@@ -108,7 +99,6 @@ label {
     padding: $spacing;
   }
 
-
   h3, h4 {
     color: $color-text;
   }
@@ -117,4 +107,20 @@ label {
 .font-book-antiqua {
   font-family: "Book Antiqua", "Palatino", "Palatino Linotype", "Palatino LT STD", "Georgia", serif;
   font-size: 16px;
+}
+#box-copy {
+  margin-top: 20px;
+  background: $white;
+  background: rgba($white, 0.95);
+  padding: $spacing*2;
+  color: $color-text;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  @media all and (max-width: 600px) {
+    padding: $spacing;
+  }
+
+  h3, h4 {
+    color: $color-text;
+  }
 }
