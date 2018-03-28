@@ -1,29 +1,19 @@
 = content_for :title, "#{@event.partner_one} & #{@event.partner_two} Wedding - #{@event.formatted_time}"
 
-.box.box--mint
-  .row
-    .column.small-12
-      %h1
-        = @event.partner_one
-        %span.font--pacifico &
-        = @event.partner_two
-.row
-  .column.small-12
-    %h5 Get married on
-    %h3= @event.formatted_time
 
 #location.inverted.paralax{ :style => "background-image: url('#{@primary_venue_photo}');" }
   .row
     .column.small-12
+      %h1.cursive
+        = @event.partner_one
+        %span.cursive &
+        = @event.partner_two
       %br
-      %br
-      %br
+      %h5 Get married on
+      %h3= @event.formatted_time
 
-      %h2= "at the beautiful #{@event.venue_name}"
-      %h4= "in #{@event.venue_address_city}"
+      %h4= "at the beautiful #{@event.venue_name}"
 
-      %br
-      %br
       %br
 
       - if @event.show_rsvp?
@@ -220,4 +210,3 @@
       For our techie friends hitched.it is an
       %a{:href => "http://github.com/adambutler/wedding-on-rails"} open source project
       built on Ruby-on-Rails.
-
