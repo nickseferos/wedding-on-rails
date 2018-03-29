@@ -127,7 +127,6 @@ GEM
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -177,6 +176,9 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     orm_adapter (0.5.0)
+    passenger (5.2.2)
+      rack
+      rake (>= 0.8.1)
     pg (0.17.1)
     rack (1.5.2)
     rack-protection (1.5.3)
@@ -310,7 +312,6 @@ DEPENDENCIES
   draper
   fog
   foundation-rails
-  gmaps4rails
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -318,6 +319,7 @@ DEPENDENCIES
   kramdown
   letter_opener
   mini_magick
+  passenger
   pg
   rails (= 4.1.6)
   rails-assets-Justified-Gallery
