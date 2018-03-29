@@ -64,6 +64,13 @@
         = raw(@event.venue_directions.from_markdown_to_html)
         %br
         .map--overlay{onclick: "style.pointerEvents='none'"}
+        .show-for-medium-up
+          :plain
+            <iframe width="800" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaYoIKt55hVQRH4IKveLrVds&key=AIzaSyD00ILSM1tXE-PuOEUCbsKz0CPgZgLL5Ec" allowfullscreen></iframe>
+        .show-for-small-only
+          :plain
+            <iframe width="400" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaYoIKt55hVQRH4IKveLrVds&key=AIzaSyD00ILSM1tXE-PuOEUCbsKz0CPgZgLL5Ec" allowfullscreen></iframe>
+
     .show-for-small-only
       =image_tag('FrameBottomsmallscreen.png', class: 'frame')
   - @event.sections.each do |section|
