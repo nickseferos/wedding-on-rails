@@ -3,6 +3,7 @@ class Admin::SectionsController < ApplicationController
   before_filter :set_event, only: [:index, :update, :show, :new, :edit, :create, :destroy]
   before_filter :set_section, only: [:show, :update, :edit, :destroy]
   before_filter :set_set_section, only: [:index]
+  before_action :authenticate_admin!
 
   def index
   end

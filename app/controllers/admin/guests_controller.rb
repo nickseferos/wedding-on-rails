@@ -5,6 +5,7 @@ class Admin::GuestsController < ApplicationController
   before_filter :set_groups, only: [:index]
   before_filter :set_guest, only: [:show, :update, :edit, :destroy]
   before_filter :set_guests, only: [:index]
+  before_action :authenticate_admin!
 
   def index
     render json: @guests

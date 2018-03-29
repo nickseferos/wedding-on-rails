@@ -150,3 +150,10 @@ guest_rsvp_true = Guest.create!({
   group_id: debug.id,
   rsvp: true
 })
+
+admin = Admin.new(
+  email: "nick.seferos@gmail.com",
+  password: "goobybooby",
+  password_confirmation: "goobybooby",
+)
+admin.save

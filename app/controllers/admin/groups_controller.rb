@@ -3,6 +3,7 @@ class Admin::GroupsController < ApplicationController
   before_filter :set_event, only: [:index, :show, :edit, :destroy]
   before_filter :set_group, only: [:show, :edit, :destroy]
   before_filter :set_guests, only: [:show]
+  before_action :authenticate_admin!
 
   def show
     render json: @guests
