@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   before_filter :set_groups, only: [:show]
 
   def show
+    @textbreaker = [ "option1.png", "option2.png", "option3.png", "option4.png" ]
     @group = Group.new
     @primary_venue_photo = VenuePhoto.find(@event.primary_venue_photo).file_url unless @event.primary_venue_photo.nil?
     @venue_photos = VenuePhoto.where.not(id: @event.primary_venue_photo) || []

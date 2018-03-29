@@ -4,18 +4,13 @@
 #location.inverted.paralax{ :style => "background-image: url('#{@primary_venue_photo}');" }
   .row
     .column.small-12
-      %h1.cursive
-        = @event.partner_one
-        %span.cursive &
-        = @event.partner_two
+      .show-for-small-only
+        =image_tag('weddinglogo.png', class: 'herologo')
+      .show-for-medium-up
+        =image_tag('weddinglogo.png', class: 'herologomedium')
+      %h4= "Join us in starting our marriage at the #{@event.venue_name}"
       %br
-      %h5 Get married on
-      %h3= @event.formatted_time
-
-      %h4= "at the beautiful #{@event.venue_name}"
-
       %br
-
       - if @event.show_rsvp?
         = link_to raw("<span class='icon icon-pencil'></span> RSVP now"), "#rsvp", class: "button large js-scroll-to"
 
@@ -65,29 +60,30 @@
         = raw(@event.venue_body.from_markdown_to_html)
         %br
         %h4 Directions
+        =image_tag('junglebranch.png', class: 'branch')
         = raw(@event.venue_directions.from_markdown_to_html)
         %br
         .map--overlay{onclick: "style.pointerEvents='none'"}
-        :plain
-          <iframe width="800" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Port%20Of%20Anacortes&key=AIzaSyAUmBekIMfUQw3xLY1LTjhWY2nM18wIFrA" allowfullscreen></iframe>
-
+    .show-for-small-only
+      =image_tag('FrameBottomsmallscreen.png', class: 'frame')
   - @event.sections.each do |section|
     %section
       %br
       .row
+        .show-for-medium-up
+          =image_tag 'FrameTopSmall.png', class: 'topframe'
         .column.small-12.medium-8.medium-offset-2
-        #box-copy
-          %h3= section.title
-          = raw(section.content.from_markdown_to_html)
+          #box-copy
+            %h3= section.title
+            =image_tag @textbreaker.sample
+            = raw(section.content.from_markdown_to_html)
+        .show-for-medium-up
+          =image_tag 'FrameBottomSmall.png', class: 'frame'
+        .show-for-small-only
+          =image_tag('FrameBottomsmallscreen.png', class: 'frame')
 
   %br
 
-  #ballons
-    #balloon01{data: {top: {bottom: "top: -150px"}, bottom: {center: "top: 200px"}}}
-    #balloon02{data: {top: {bottom: "top: -200px"}, bottom: {center: "top: 350px"}}}
-    #balloon03{data: {top: {bottom: "top: -50px"}, bottom: {center: "top: 230px"}}}
-  #bridge
-    #couple
 
 %br
 
@@ -106,10 +102,3 @@
       %p We invite you back to this website after the wedding to view and upload photos
 
 %br
-
-%footer
-  %p
-    %small
-      For our techie friends hitched.it is an
-      %a{:href => "http://github.com/adambutler/wedding-on-rails"} open source project
-      built on Ruby-on-Rails.

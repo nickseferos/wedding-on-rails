@@ -9,7 +9,7 @@ event = Event.create!({
   title: "Nicholas & Denali",
   partner_one: "Denali",
   partner_two: "Nicholas",
-  venue_name: "Port of Anacortes - Transit Shed",
+  venue_name: "Port of Anacortes",
   venue_address_line_one: "100 Commercial Ave",
   venue_address_city: "Anacortes",
   venue_address_state: "Washington",

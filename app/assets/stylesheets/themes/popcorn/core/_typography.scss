@@ -90,10 +90,11 @@ label {
 #venue-copy {
   margin-top: -100px;
   background: $white;
-  background: rgba($white, 0.95);
+  background: linear-gradient(rgba($white, 0.95), rgba($white, 0));
   padding: $spacing*2;
   color: $color-text;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  z-index: 100;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   @media all and (max-width: 600px) {
     padding: $spacing;
@@ -109,12 +110,12 @@ label {
   font-size: 16px;
 }
 #box-copy {
-  margin-top: 20px;
+  margin-top: -110px;
   background: $white;
-  background: rgba($white, 0.95);
+  background: rgba(255, 255, 234, 0);
   padding: $spacing*2;
   color: $color-text;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   @media all and (max-width: 600px) {
     padding: $spacing;
@@ -123,4 +124,30 @@ label {
   h3, h4 {
     color: $color-text;
   }
+}
+.frame {
+  margin-top: -130px;
+  z-index: 1;
+  width: 100%;
+}
+.babyframe{
+  margin-top: -40px;
+
+}
+.branch {
+  margin-top: -20px;
+}
+.herologo {
+  margin-top: 15vh;
+  padding-bottom: 15vh;
+}
+.herologomedium {
+  margin-top: 15vh;
+  padding-bottom: 5vh;
+  width: 40vw;
+}
+.topframe {
+  margin-top: 0px;
+  z-index: 1;
+  width: 100%;
 }
