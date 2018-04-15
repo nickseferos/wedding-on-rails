@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180415002117) do
+ActiveRecord::Schema.define(version: 20180415214738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,6 +110,8 @@ ActiveRecord::Schema.define(version: 20180415002117) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order"
+    t.text     "bio"
+    t.text     "partybio"
   end
 
   add_index "parties", ["event_id"], name: "index_parties_on_event_id", using: :btree

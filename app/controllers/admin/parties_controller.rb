@@ -38,7 +38,7 @@ class Admin::PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(:name, :position, :image, :order)
+    params.require(:party).permit(:name, :position, :image, :order, :partybio)
   end
 
   def set_event
