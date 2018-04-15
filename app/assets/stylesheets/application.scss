@@ -146,3 +146,53 @@
   0% { transform: translateY(0) scale(1); }
   100% { transform: translateY(400px) scale(1.2); } /* Must be full height of sprite or skipping will happen.*/
 }
+
+$card-user-container-margin-bottom: 1rem;
+$card-user-container-radius: $global-radius;
+$card-user-container-background: $white;
+$card-user-container-color: $black;
+$card-user-container-image-size: rem-calc(190);
+
+.card-user-container {
+  margin-bottom: $card-user-container-margin-bottom;
+  background-color: $card-user-container-background;
+  color: $black;
+  overflow: hidden;
+  padding: 0;
+  border-radius: $card-user-container-radius;
+
+  .card-user-avatar {
+    .user-image {
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      width: $card-user-container-image-size;
+      height: $card-user-container-image-size;
+      padding: rem-calc(15);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card-user-bio {
+    padding: 1rem;
+    text-align: center;
+
+    .location {
+      display: inline-block;
+      margin: 0 rem-calc(15);
+      color: $secondary-color;
+      font-size: rem-calc(14);
+    }
+  }
+}
+
+
+/*
+ @import "froala_editor.min";
+ @import "froala_style.min";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ */

@@ -88,3 +88,4 @@ gem "rails-assets-lodash"
 gem "rails-assets-restangular"
 gem 'devise'
 gem 'passenger'
+gem "wysiwyg-rails"

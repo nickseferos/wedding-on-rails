@@ -73,6 +73,16 @@
 
     .show-for-small-only
       =image_tag('FrameBottomsmallscreen.png', class: 'frame')
+  - @event.patries.each do |party|
+    %section
+      .row
+        .card-user-container
+          .card-user-avatar
+            image_tag image.user-image
+          .card-user-bio
+            %h4= name
+            %p= bio
+    %br
   - @event.sections.each do |section|
     %section
       %br

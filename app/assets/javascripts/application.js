@@ -33,3 +33,6 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+#= require froala_editor.min.js
+
+$('selector').froalaEditor();
