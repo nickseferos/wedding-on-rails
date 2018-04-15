@@ -46,7 +46,7 @@
 .box.box--mint
   .row
     .column.small-12
-      %h5 Venue
+      %h5.forceblack Venue
 
   .row-fluid.overflow
     %ul.small-block-grid-3
@@ -73,6 +73,7 @@
 
     .show-for-small-only
       =image_tag('FrameBottomsmallscreen.png', class: 'frame')
+
   - @event.sections.each do |section|
     %section
       %br
@@ -93,6 +94,17 @@
 
 
 %br
+%section
+  .row
+    .small-12.medium-6.containers
+      - @event.parties.each do |party|
+        .card-user-container
+          .card-user-avatar
+            = image_tag party.image, class: "user-image"
+          .card-user-bio
+            %h4.forceblack= party.name
+            %em= party.position
+            %p= party.partybio
 
 .row
   .column.small-12.medium-8.medium-offset-2
