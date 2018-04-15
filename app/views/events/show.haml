@@ -96,8 +96,8 @@
 %br
 %section
   .row
-    .small-12.medium-6.containers
-      - @event.parties.each do |party|
+    - @event.parties.each do |party|
+      .small-12.medium-6.columns
         .card-user-container
           .card-user-avatar
             = image_tag party.image, class: "user-image"
