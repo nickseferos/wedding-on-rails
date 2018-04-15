@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       resources :sections
       resources :guests, except: [:show]
       resources :groups
+      resources :parties
     end
     root "admin#dashboard"
   end

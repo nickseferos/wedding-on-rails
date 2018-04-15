@@ -8,6 +8,7 @@ class Admin::AdminController < ApplicationController
     @groups = Group.all.decorate
 
     @section = Section.new
+    @party = Party.new
   end
 
   private

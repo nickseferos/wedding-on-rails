@@ -7,6 +7,7 @@ class Event < ActiveRecord::Base
   has_many :tasks
   has_many :venue_photos
   has_many :event_notifications
+  has_many :parties
 
   after_create :create_event_task_list
 

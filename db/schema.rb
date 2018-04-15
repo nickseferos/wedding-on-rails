@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329043547) do
+ActiveRecord::Schema.define(version: 20180415000707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,17 @@ ActiveRecord::Schema.define(version: 20180329043547) do
     t.integer  "group_id"
     t.integer  "event_id"
   end
+
+  create_table "parties", force: true do |t|
+    t.string   "name"
+    t.string   "position"
+    t.string   "image"
+    t.string   "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "parties", ["event_id"], name: "index_parties_on_event_id", using: :btree
 
   create_table "photos", force: true do |t|
     t.string   "file"
