@@ -18,7 +18,7 @@ class Admin::PartiesController < ApplicationController
   def create
     @party = Party.new(party_params)
     @party.event_id = @event.id
-    @party.save
+    @party.save!
     redirect_to :back
   end
 
@@ -38,7 +38,7 @@ class Admin::PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(:title, :content)
+    params.require(:party).permit(:name, :position, :image, :order)
   end
 
   def set_event
