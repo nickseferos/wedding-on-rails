@@ -40,8 +40,6 @@ $color-text: #555;
 
 $mobile: 767px;
 
-
-$white: #fff;
 $global-radius: 3px;
 // core icons
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -119,7 +117,6 @@ $spacing: 20px;
 $spacing-half: $spacing/2;
 
 $mobile: 767px;
-$white: #fff;
 body {
   text-align: center;
 }
