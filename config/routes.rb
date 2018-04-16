@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'store/index'
+
+  get 'store/show'
+
+  get 'store/create'
+
+  get 'store/edit'
+
+  get 'store/update'
+
+  get 'store/destroy'
+
   devise_for :admins
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code
