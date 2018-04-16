@@ -69,10 +69,7 @@
             <iframe width="800" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaYoIKt55hVQRH4IKveLrVds&key=AIzaSyD00ILSM1tXE-PuOEUCbsKz0CPgZgLL5Ec" allowfullscreen></iframe>
         .show-for-small-only
           :plain
-            <iframe width="400" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaYoIKt55hVQRH4IKveLrVds&key=AIzaSyD00ILSM1tXE-PuOEUCbsKz0CPgZgLL5Ec" allowfullscreen></iframe>
-
-    .show-for-small-only
-      =image_tag('FrameBottomsmallscreen.png', class: 'frame')
+            <iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaYoIKt55hVQRH4IKveLrVds&key=AIzaSyD00ILSM1tXE-PuOEUCbsKz0CPgZgLL5Ec" allowfullscreen></iframe>
 
   - @event.sections.each do |section|
     %section
@@ -88,7 +85,7 @@
         .show-for-medium-up
           =image_tag 'FrameBottomSmall.png', class: 'frame'
         .show-for-small-only
-          =image_tag('FrameBottomsmallscreen.png', class: 'frame')
+          =image_tag('FrameBottomsmallscreen.png', class: 'framesmall')
 
   %br
 
