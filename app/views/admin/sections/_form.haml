@@ -1,5 +1,4 @@
-= simple_form_for [:admin, @event, @store] do |f|
-  = f.input :name
-  = f.input :logo
-  = f.input :link
+= simple_form_for [:admin, @event, @section] do |f|
+  = f.input :title
+  = f.input :content
   = f.button :submit, class: "button button--light"

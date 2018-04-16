@@ -95,16 +95,29 @@
 
 %br
 %section
+  %h3 The Wedding Party
   .row
-    .small-12.medium-6.containers
-      - @event.parties.each do |party|
+    - @event.parties.each do |p|
+      .small-12.medium-6.columns
         .card-user-container
           .card-user-avatar
-            = image_tag party.image, class: "user-image"
+            = image_tag p.image, class: "user-image"
           .card-user-bio
-            %h4.forceblack= party.name
-            %em= party.position
-            %p= party.partybio
+            %h4.forceblack= p.name
+            %em= p.position
+            %p= p.partybio
+%section
+  %h3 Registries
+  .row
+    - @event.stores.each do |s|
+      .small-12.medium-6.columns
+        .card-user-container
+          .card-user-bio
+            %h4.forceblack= s.name
+          .card-user-avatar
+            = image_tag s.logo, class: "user-image"
+          .card-user-button
+            = link_to s.name, "#{s.link}" , class: 'hollow button'
 .row
   .column.small-12.medium-8.medium-offset-2
     %h5 Photos
