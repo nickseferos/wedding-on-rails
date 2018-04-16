@@ -51,6 +51,6 @@ class Admin::RegistriesController < ApplicationController
   end
 
   def set_registries
-    @registry = @event.registries.all
+    @registries = @event.registries.all
   end
 end

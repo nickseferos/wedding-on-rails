@@ -24,7 +24,7 @@
       %p= "Groups".pluralize(@groups.count)
   %li
     .panel.text-center
-      %h2= "Exponsive"
+      %h2= "Expensive"
       %p= "Estimated Cost"
   %li
     .panel.text-center
@@ -90,7 +90,7 @@
           %tbody
             - @event.registries.each do |reg|
               %tr
-                %td= reg.logo
+                %td= reg.store
                 %td
                   = link_to "edit", edit_admin_event_registry_path(@event, registry)
                   = link_to "delete", admin_event_registry_path(@event, registry), data: { confirm: "Are you sure you want to delete this registry?" }, method: :delete
