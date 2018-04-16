@@ -38,7 +38,7 @@ class Admin::StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:title, :content)
+    params.require(:store).permit(:name, :logo, :link)
   end
 
   def set_event

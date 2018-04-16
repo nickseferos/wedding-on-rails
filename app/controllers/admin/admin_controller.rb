@@ -9,6 +9,7 @@ class Admin::AdminController < ApplicationController
 
     @section = Section.new
     @party = Party.new
+    @store = Store.new
   end
 
   private
