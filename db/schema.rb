@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180415210108) do
+ActiveRecord::Schema.define(version: 20180416195922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 20180415210108) do
     t.datetime "updated_at"
     t.integer  "order"
     t.text     "bio"
+    t.text     "partybio"
   end
 
   add_index "parties", ["event_id"], name: "index_parties_on_event_id", using: :btree
@@ -122,6 +123,17 @@ ActiveRecord::Schema.define(version: 20180415210108) do
     t.integer  "event_id"
   end
 
+  create_table "registries", force: true do |t|
+    t.string   "store"
+    t.string   "logo"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "event_id"
+  end
+
+  add_index "registries", ["event_id"], name: "index_registries_on_event_id", using: :btree
+
   create_table "sections", force: true do |t|
     t.string   "title"
     t.text     "content"
@@ -129,6 +141,18 @@ ActiveRecord::Schema.define(version: 20180415210108) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "stores", force: true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.string   "link"
+    t.string   "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id_id"
+  end
+
+  add_index "stores", ["event_id_id"], name: "index_stores_on_event_id_id", using: :btree
 
   create_table "task_lists", force: true do |t|
     t.integer  "event_id"

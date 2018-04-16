@@ -15,3 +15,38 @@ h1, h2, h3, h4, h5, h6 {
 .gm-style img {
   max-width: none;
 }
+
+$card-user-container-margin-bottom: 1rem;
+$card-user-container-radius: $global-radius;
+$card-user-container-background: $mint;
+$card-user-container-color: $black;
+$card-user-container-image-size: rem-calc(190);
+
+.card-user-container {
+  margin-bottom: $card-user-container-margin-bottom;
+  background-color: $card-user-container-background;
+  color: $black;
+  overflow: hidden;
+  padding: 0;
+  border-radius: $card-user-container-radius;
+
+  .card-user-avatar {
+    .user-image {
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      width: $card-user-container-image-size;
+      height: $card-user-container-image-size;
+      padding: rem-calc(15);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card-user-bio {
+    padding: 1rem;
+    text-align: center;
+  }
+}

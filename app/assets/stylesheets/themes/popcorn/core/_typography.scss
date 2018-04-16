@@ -78,7 +78,9 @@ label {
   color: $white;
   [title="required"] { display: none; }
 }
-
+  .forceblack {
+    color: $color-text;
+  }
 .text--left {
   text-align: left;
 }
