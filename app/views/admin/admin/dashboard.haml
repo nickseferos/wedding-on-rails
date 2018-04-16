@@ -81,6 +81,22 @@
 
       = render partial: "admin/parties/form"
 
+      #content.content
+        %table
+          %thead
+            %tr
+              %th Store
+              %th Actions
+          %tbody
+            - @event.registries.each do |reg|
+              %tr
+                %td= reg.logo
+                %td
+                  = link_to "edit", edit_admin_event_registry_path(@event, registry)
+                  = link_to "delete", admin_event_registry_path(@event, registry), data: { confirm: "Are you sure you want to delete this registry?" }, method: :delete
+
+        = render partial: "admin/registries/form"
+
   #todos.content
     = render partial: "lists"
   #venue.content
