@@ -29,12 +29,7 @@ $gray-dark: #95a5a6;
 $gray-darker: #7f8c8d;
 $black: #333; // <- its all lies! Muhaahaha!
 
-$spacing: 20px;
-$spacing-half: $spacing/2;
-
-$color-text: #555;
-
-$mobile: 767px;
+// Core/variables
 $salmon: #E1967D;
 $mint: #FFFFEA;
 $mint-light: #dae5e6;
@@ -43,20 +38,356 @@ $spacing-half: $spacing/2;
 
 $color-text: #555;
 
-@import "core/variables";
+$mobile: 767px;
+
+
 $white: #fff;
 $global-radius: 3px;
-@import "core/icons";
+// core icons
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
 
-@import "object/card";
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
 
-@import "ui/button";
-@import "ui/card";
-@import "ui/footer";
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
 
-@import "layout/core";
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-pencil:before { content: '\e800'; } /* '' */
+.icon-camera:before { content: '\e801'; } /* '' */
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-pencil:before { content: '\e800'; } /* '' */
+.icon-camera:before { content: '\e801'; } /* '' */
+
+// typogrophay
+$color-text: #555;
+$salmon: #E1967D;
+$spacing: 20px;
+$spacing-half: $spacing/2;
+
 $mobile: 767px;
-@import "core/typography";
+$white: #fff;
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 9em;
+
+  @media all and (max-width: $mobile) {
+    font-size: 3.5em;
+  }
+}
+
+h2 {
+  font-family: "Sacramento", sans-serif;
+  font-size: 5.5em;
+
+  @media all and (max-width: $mobile) {
+    font-size: 3em;
+  }
+}
+
+h3 {
+  font-family: "Sacramento", sans-serif;
+  font-size: 4em;
+
+  @media all and (max-width: $mobile) {
+    font-size: 2.2em;
+  }
+}
+
+h4 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 3em;
+}
+
+h5 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 4em;
+
+  @media all and (max-width: $mobile) {
+    font-size: 3em;
+  }
+}
+
+h6 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 3em;
+}
+
+p {
+  font-family: "Open Sans", "Palatino", "Palatino Linotype", "Palatino LT STD", "Georgia", serif;
+  font-size: 1.2em;
+
+  small {
+    font-size: 0.8em;
+  }
+
+  @media all and (max-width: $mobile) {
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 600px) {
+  h2 {
+    font-size: 2.2em;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+}
+
+
+label {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 2em;
+  color: $white;
+  [title="required"] { display: none; }
+}
+  .forceblack {
+    color: $color-text;
+  }
+.text--left {
+  text-align: left;
+}
+
+.text--salmon {
+  color: $salmon;
+}
+
+#venue-copy {
+  margin-top: -100px;
+  background: $white;
+  background: linear-gradient(rgba($white, 0.95), rgba($white, 0));
+  padding: $spacing*2;
+  color: $color-text;
+  z-index: 100;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  @media all and (max-width: 600px) {
+    padding: $spacing;
+  }
+
+  h3, h4 {
+    color: $color-text;
+  }
+}
+
+.font-book-antiqua {
+  font-family: "Book Antiqua", "Palatino", "Palatino Linotype", "Palatino LT STD", "Georgia", serif;
+  font-size: 16px;
+}
+#box-copy {
+  margin-top: -110px;
+  background: $white;
+  background: rgba(255, 255, 234, 0);
+  padding: $spacing*2;
+  color: $color-text;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  @media all and (max-width: 600px) {
+    padding: $spacing;
+  }
+
+  h3, h4 {
+    color: $color-text;
+  }
+}
+.frame {
+  margin-top: -130px;
+  z-index: 1;
+  width: 100%;
+}
+.babyframe{
+  margin-top: -40px;
+
+}
+.branch {
+  margin-top: -20px;
+}
+.herologo {
+  margin-top: 15vh;
+  padding-bottom: 15vh;
+}
+.herologomedium {
+  margin-top: 15vh;
+  padding-bottom: 5vh;
+  width: 40vw;
+}
+.topframe {
+  margin-top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+
+//object card
+.card {
+  padding: $spacing;
+  margin-bottom: $spacing;
+}
+
+//ui button
+.button {
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 100px;
+  background-color: $salmon;
+  font-family: "Amatic SC";
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: darken($salmon, 5%);
+  }
+}
+
+.button--light {
+  background: $white;
+  color: mix($mint, #333);
+  &:hover {
+    background-color: $white;
+    color: $salmon;
+  }
+}
+
+// ui card
+.card {
+  background: $white;
+  color: $salmon;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  h1, h2, h3, h4, h5, h6, label {
+    color: $salmon;
+  }
+}
+
+//ui footer
+footer {
+  @extend .card;
+  margin: 0 40px;
+  padding: 10px 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: $color-text;
+  a { color: $salmon; }
+  p {
+    margin: 0;
+  }
+}
+
+
+//layout core
+body {
+  background: $salmon;
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $white;
+}
+
+.inverted {
+  background: $white;
+  color: $salmon;
+}
+
+.gm-style img {
+  max-width: none;
+}
+$card-user-container-margin-bottom: 1rem;
+$card-user-container-radius: $global-radius;
+$card-user-container-background: $mint;
+$card-user-container-color: $black;
+$card-user-container-image-size: rem-calc(190);
+
+.card-user-container {
+  margin-bottom: $card-user-container-margin-bottom;
+  background-color: $card-user-container-background;
+  color: $black;
+  overflow: hidden;
+  padding: 0;
+  border-radius: $card-user-container-radius;
+
+  .card-user-avatar {
+    .user-image {
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      width: $card-user-container-image-size;
+      height: $card-user-container-image-size;
+      padding: rem-calc(15);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card-user-bio {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+$mobile: 767px;
+
 .box--mint {
   background: $mint;
 
