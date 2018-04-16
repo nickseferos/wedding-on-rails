@@ -36,6 +36,8 @@ $color-text: #555;
 
 $mobile: 767px;
 
+@import "core/variables";
+$white: #fff;
 $global-radius: 3px;
 @import "core/icons";
 
