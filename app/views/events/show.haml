@@ -21,7 +21,7 @@
     .column.small-12
       %h5 RSVP
       = simple_form_for rsvp_event_groups_path(@event) do |f|
-        %h3 Step one - enter your name
+        %h3 Enter your name
         .row
           .column.small-12.column.medium-6.medium-offset-3
             = f.input :guest, collection: @groups, as: :select, placeholder: "Select your name(s)"
@@ -42,6 +42,15 @@
               %label
                 %input{type: "checkbox", ng: {change: "toggleVegetarian(guest)", model: "guest.vegetarian"}}
                 Vegetarian
+.box.box--mint
+  .row
+    .column.small-12
+      %h5.forceblack Any Song Requests?
+  .row
+    :plain
+      <iframe height="652" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://seferos.wufoo.com/embed/znbqmbj1xrai0z/"><a href="https://seferos.wufoo.com/forms/znbqmbj1xrai0z/">Song Requests Here!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
+
+
 
 .box.box--mint
   .row
@@ -114,7 +123,7 @@
           .card-user-avatar
             = image_tag s.logo, class: "user-image"
           .card-user-button
-            = link_to s.name, "#{s.link}" , class: 'hollow button'
+            = link_to s.name, "#{s.link}" , class: 'hollow button', target: '_blank'
 .row
   .column.small-12.medium-8.medium-offset-2
     %h5 Photos

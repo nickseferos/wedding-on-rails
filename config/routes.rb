@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code
   end
-
+  resources :songs
   resources :events, except: [:index] do
 
     resources :groups do
       resources :guests
     end
 
+    resources :songs
     resources :photos
     resources :venue_photos
 
@@ -32,6 +33,7 @@ Rails.application.routes.draw do
       resources :groups
       resources :parties
       resources :stores
+      resources :songs
     end
     root "admin#dashboard"
   end
@@ -39,6 +41,7 @@ Rails.application.routes.draw do
   resources :photos, :only => [:index, :create, :destroy]
 
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+  get '/songs', :to => redirect('/', status: 301)
 
   root "events#show"
 end

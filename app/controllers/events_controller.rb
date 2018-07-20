@@ -9,11 +9,21 @@ class EventsController < ApplicationController
     @primary_venue_photo = VenuePhoto.find(@event.primary_venue_photo).file_url unless @event.primary_venue_photo.nil?
     @venue_photos = VenuePhoto.where.not(id: @event.primary_venue_photo) || []
     @parties = Party.order(:order)
+    @songs = Song.new(song_params)
   end
 
   def update
     @event.update_attributes(event_params)
     redirect_to :back
+  end
+
+  def create
+    @song = Song.new
+    if @song.save
+      redirect_to root_path, notice: 'Great pick! We added that to our list!'
+    else
+      redirect_to root_path, notice: "We couldn't add that one right now. Try again in a few minutes."
+    end
   end
 
   private
@@ -28,5 +38,8 @@ class EventsController < ApplicationController
 
   def set_groups
     @groups = @event.groups
+  end
+  def song_params
+    params.permit(:title, :artist)
   end
 end

@@ -10,6 +10,7 @@ class Admin::AdminController < ApplicationController
     @section = Section.new
     @party = Party.new
     @store = Store.new
+    @songs = Song.all
   end
 
   private

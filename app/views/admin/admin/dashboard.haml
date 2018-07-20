@@ -42,6 +42,7 @@
     %a{:href => "#venue"} Venue
   %dd
     %a{:href => "#guests"} Guests
+
 .tabs-content
   #settings.content.active
     - if @guests.empty?
@@ -94,6 +95,7 @@
                 = link_to "edit", edit_admin_event_store_path(@event, s)
                 = link_to "delete", admin_event_store_path(@event, s), data: { confirm: "Are you sure you want to delete this store?" }, method: :delete
 
+  
       = render partial: "admin/stores/form"
   #todos.content
     = render partial: "lists"
